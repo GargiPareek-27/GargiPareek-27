@@ -125,7 +125,7 @@ Hybrid RoBERTa + BiLSTM fake news detection system with attention mechanism and 
 
 <br/>
 
-### 🔹 SolarFlareForecasting
+### 🔹 SolarFlareForecasting(Team Project)
 
 AI-powered solar flare forecasting using Aditya-L1 SoLEXS data, built for the ISRO Bharatiya Antariksh Hackathon.
 
