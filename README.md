@@ -176,9 +176,6 @@ AI-powered solar flare forecasting using Aditya-L1 SoLEXS data, built for the IS
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=GargiPareek-27&show_icons=true&theme=nord&border_color=6366F1&title_color=6366F1&text_color=c0caf5&icon_color=6366F1&bg_color=1a1b27" alt="GitHub Stats" height="165"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=GargiPareek-27&layout=compact&theme=nord&border_color=6366F1&title_color=6366F1&text_color=c0caf5&bg_color=1a1b27" alt="Top Languages" height="165"/>
-
 <img src="https://streak-stats.demolab.com/?user=GargiPareek-27&theme=nord&border=6366F1&ring=6366F1&fire=6366F1&currStreakLabel=6366F1&background=1a1b27" alt="GitHub Streak"/>
 
 </div>
