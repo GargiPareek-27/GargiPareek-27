@@ -160,15 +160,6 @@ flowchart LR
     G --> H[Prediction]
 ```
 
-**Results** (held-out test set, via `src/evaluate.py`)
-
-| Metric | Score |
-|---|---|
-| Accuracy | 97.25% |
-| Precision | 97.66% |
-| Recall | 96.81% |
-| F1-Score | 97.23% |
-
 <p>
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
 <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
@@ -183,13 +174,7 @@ flowchart LR
 
 <br/>
 
-<img src="https://github.com/GargiPareek-27/FactsAI/raw/main/assets/classification_report.png" width="100%" />
-<sub>Classification Report</sub>
-
-<br/><br/>
-
-<img src="https://github.com/GargiPareek-27/FactsAI/raw/main/assets/roc_curve.png" width="100%" />
-<sub>ROC Curve</sub>
+<
 
 </td>
 </tr>
