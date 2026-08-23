@@ -2,7 +2,7 @@
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=1200&color=38BDF8&center=true&vCenter=true&width=750&lines=Gargi+Pareek;Building+Production-Ready+AI+Systems;Neuro-Symbolic+Reasoning+%7C+RAG+%7C+FastAPI" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=1200&color=38BDF8&center=true&vCenter=true&width=750&lines=Gargi+Pareek;Building+Production-Ready+AI+Systems;Neuro-Symbolic+Reasoning+%7C+FastAPI+%7C+Next.js" alt="Typing SVG" />
 
 <br/>
 
@@ -33,20 +33,29 @@
 
 ---
 
-
-
 ## About
 
-Computer Science undergraduate at **IIIT Pune**. I build AI systems that go past the notebook stage — full applications with a backend, a frontend, and reasoning that holds up under real inputs, not just curated demo prompts.
+Computer Science undergraduate at **IIIT Pune** (B.Tech CSE, expected 2028). I build AI systems that go past the notebook stage — full applications with a backend, a frontend, and reasoning that holds up under real inputs, not just curated demo prompts.
 
-**`EquationAI`** and **`FactsAI`** are where most of that shows: a neuro-symbolic math reasoning platform and a hybrid transformer + RNN pipeline for fake news detection. Both are shipped, not just prototyped.
+**`EquationAI`** and **`FactsAI`** are where most of that shows: a neuro-symbolic math reasoning platform (live and deployed) and a hybrid transformer + RNN pipeline for fake news detection (currently being re-validated after fixing a data-labeling bug).
 
 > I care most about the layer between *"the model works"* and *"the model is verifiably correct"* — the difference between an LLM sounding confident and a system that actually checks its own answers.
 
 <br/>
 
----
+### Quick Facts for Recruiters
 
+| | |
+|---|---|
+| 🎓 **Education** | B.Tech CSE, IIIT Pune — Class of 2028 |
+| 🎯 **Targeting** | SDE / AI-ML / NLP Internships (currently: UBS Business Solutions India SIP) |
+| 🏆 **Hackathons** | Bharatiya Antariksh Hackathon 2026 · Smart India Hackathon · Myntra WeForShe HackerRamp |
+| 🛠️ **Shipped** | 1 live deployed full-stack AI product (EquationAI), evaluated on a 42-problem custom benchmark |
+| 📫 **Contact** | [LinkedIn](https://www.linkedin.com/in/gargi-pareek-004895364) · [Email](mailto:gargipareek2007@gmail.com) · [GitHub](https://github.com/GargiPareek-27) |
+
+<br/>
+
+---
 
 <div align="center">
 
@@ -59,9 +68,6 @@ Computer Science undergraduate at **IIIT Pune**. I build AI systems that go past
 Combines LLM reasoning with deterministic SymPy computation for verified, step-by-step solutions — not just plausible-sounding ones.
 
 <br/>
-
-
-
 
 <a href="https://github.com/GargiPareek-27/EquationAI"><img src="https://img.shields.io/badge/Repository-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
 <a href="https://equation-ai.vercel.app/"><img src="https://img.shields.io/badge/Live%20Demo-38BDF8?style=for-the-badge&logo=vercel&logoColor=white" /></a>
@@ -78,10 +84,6 @@ To close the remaining gap, a **mismatch verifier** independently compares the L
 
 <br/>
 
-<table>
-<tr>
-<td width="50%" valign="top">
-
 **Core Features**
 
 | | |
@@ -91,32 +93,63 @@ To close the remaining gap, a **mismatch verifier** independently compares the L
 | ✅ | Independent mismatch verifier cross-checks every answer |
 | 🔒 | Sandboxed execution — `__builtins__` stripped, only SymPy exposed |
 | 📐 | LaTeX-rendered step-by-step output via KaTeX |
+| 🧪 | Resumable evaluation harness with adversarial test cases |
 
-</td>
-<td width="50%" valign="top">
+<br/>
 
-**Architecture**
+**Full System Architecture**
 
 ```mermaid
 flowchart TD
-    A[User Problem] --> B[Gemini: JSON plan]
-    B --> C[Sandboxed SymPy Executor]
-    C --> D[Mismatch Verifier]
-    B -.claimed answer.-> D
-    D --> E[Rendered Solution]
-```
+    subgraph Client["Frontend — Next.js 16 / React 19 / Tailwind"]
+        A[User submits problem]
+        N[Step-by-step solution rendered with KaTeX]
+    end
 
-</td>
-</tr>
-</table>
+    subgraph API["Backend — FastAPI"]
+        B[Request received & validated]
+        C[Gemini 2.5 Flash: decomposes problem]
+        D["Structured JSON plan
+        (variables, steps, SymPy exprs, claimed answer)"]
+    end
+
+    subgraph Sandbox["Sandboxed Execution Layer"]
+        E["SymPy Executor
+        (__builtins__ stripped)"]
+        F{Execution successful?}
+        G[Computed step-by-step result]
+        H[Error handler → graceful failure response]
+    end
+
+    subgraph Verify["Verification Layer"]
+        I[Mismatch Verifier]
+        J{Numeric match
+        with LLM's claimed answer?}
+        K[Symbolic simplification fallback
+        sympy.simplify a - b == 0]
+        L[Verified final answer]
+    end
+
+    A --> B --> C --> D --> E
+    E --> F
+    F -->|Yes| G
+    F -->|No| H
+    D -. claimed answer .-> I
+    G --> I --> J
+    J -->|Yes| L
+    J -->|No| K --> L
+    L --> N
+```
 
 <br/>
 
 **Evaluation**
 
-A resumable evaluation harness covers **22 problems across 14 categories** — arithmetic, algebra, unit conversion, probability, combinatorics, coordinate geometry, linear algebra, series, differential equations, and substitution-trick integration. It also includes deliberately ambiguous inputs to test whether the system correctly recognizes when *not* to answer.
+A resumable evaluation harness covers **42 problems across 23 categories** — arithmetic, algebra, unit conversion, probability, combinatorics, coordinate geometry, linear algebra, series, differential equations, substitution-trick integration, 3D geometry, complex numbers, limits, optimization, statistics — plus deliberately ambiguous, nonsensical, and **adversarial prompt-injection inputs**, to test whether the system correctly recognizes when *not* to answer, or refuses to be hijacked.
 
-**Result: 22/22** — 19 auto-verified, 3 manually confirmed correct (multiple valid equivalent forms).
+**Result: 36/36 ground-truth accuracy** (6 additional cases correctly flagged for manual review due to multiple valid answer formats, not failures) — including 2/2 on prompt-injection resistance, a test category not published by comparable consumer math tools (Photomath, Mathway, Wolfram Alpha, Symbolab).
+
+[`ARCHITECTURE.md`](https://github.com/GargiPareek-27/EquationAI/blob/main/ARCHITECTURE.md) documents four real bugs found and fixed during development — including a sandboxing gap, a numeric-vs-symbolic verifier blind spot, and a scoring bug in the evaluation harness itself — with the reasoning behind each fix.
 
 **Tech Stack**
 
@@ -139,25 +172,47 @@ A resumable evaluation harness covers **22 problems across 14 categories** — a
 
 ### 📰 FactsAI
 
-<sub>Research Project — Hybrid RoBERTa–BiLSTM Fake News Detection</sub>
-
-<table>
-<tr>
-<td width="60%" valign="top">
+<sub>Research Exploration — Hybrid RoBERTa–BiLSTM Fake News Detection</sub>
 
 A hybrid deep learning system combining **RoBERTa** contextual embeddings with a **BiLSTM** and **additive attention mechanism** for fake news classification, served through a Streamlit interface. Trained on a merged **ISOT + LIAR + Kaggle** dataset.
 
-**Model Pipeline**
+<img src="https://img.shields.io/badge/Status-Active%20Cleanup-38BDF8?style=for-the-badge&labelColor=0B1120" />
+
+<sub>Reported metrics are being re-validated after fixing a data-labeling bug and a stopword-preprocessing default — see the repo's Known Limitations section.</sub>
+
+<br/>
+
+**Full Model Pipeline**
 
 ```mermaid
 flowchart LR
-    A[News Article] --> B[Cleaning]
-    B --> C[Tokenizer]
-    C --> D[RoBERTa Encoder]
-    D --> E[BiLSTM]
-    E --> F[Attention]
-    F --> G[Classifier]
-    G --> H[Prediction]
+    subgraph Ingest["Data Layer"]
+        A["Raw article
+        (ISOT + LIAR + Kaggle merged)"]
+        B[Cleaning & normalization]
+        C["Stopword handling
+        (fixed default)"]
+    end
+
+    subgraph Encode["Representation Layer"]
+        D[Tokenizer]
+        E[RoBERTa Encoder
+        contextual embeddings]
+    end
+
+    subgraph Sequence["Sequence Modeling"]
+        F[BiLSTM]
+        G[Additive Attention
+        weighs salient tokens]
+    end
+
+    subgraph Output["Prediction Layer"]
+        H[Classifier head]
+        I[Real / Fake label + confidence]
+        J[Streamlit interface]
+    end
+
+    A --> B --> C --> D --> E --> F --> G --> H --> I --> J
 ```
 
 <p>
@@ -169,54 +224,60 @@ flowchart LR
 
 <a href="https://github.com/GargiPareek-27/FactsAI"><img src="https://img.shields.io/badge/Repository-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
 
-</td>
-<td width="40%" align="center" valign="top">
-
-<br/>
-
-<
-
-</td>
-</tr>
-</table>
-
 <br/>
 
 ---
-
 
 ## Tech Stack
 
 <table>
 <tr>
-<td valign="top" width="33%">
+<td valign="top" width="25%">
 
 **Languages**
 
-<img src="https://skillicons.dev/icons?i=python,cpp,mysql" />
+<img src="https://skillicons.dev/icons?i=python,cpp" />
+
+</td>
+<td valign="top" width="25%">
 
 **AI & LLM**
 
 <img src="https://skillicons.dev/icons?i=pytorch,tensorflow" />
 
 `Transformers` `Hugging Face`
-`LangChain` `RAG`
 `Gemini API` `NLP`
 `Scikit-Learn`
 
 </td>
-<td valign="top" width="33%">
+<td valign="top" width="25%">
 
 **Backend**
 
 <img src="https://skillicons.dev/icons?i=fastapi,nodejs" />
+
+`FastAPI` `Node.js`
+
+</td>
+<td valign="top" width="25%">
 
 **Frontend**
 
 <img src="https://skillicons.dev/icons?i=nextjs,react,ts,tailwind" />
 
 </td>
-<td valign="top" width="33%">
+</tr>
+<tr>
+<td valign="top" width="25%">
+
+**Databases**
+
+<img src="https://skillicons.dev/icons?i=postgres,mongodb,mysql" />
+
+`PostgreSQL` `MongoDB` `MySQL`
+
+</td>
+<td colspan="3" valign="top">
 
 **Developer Tools**
 
@@ -230,46 +291,29 @@ flowchart LR
 
 ---
 
+## Currently Learning
 
-## Current Focus
+<sub>Actively studying, not yet backed by a shipped project — listed here rather than in the main skill stack.</sub>
 
-<table>
-<tr>
-<td width="33%" valign="top">
-
-**Building**
-
-EquationAI v2 — public deployment, 3D geometry & multi-part problem coverage
-
-</td>
-<td width="33%" valign="top">
-
-**Research**
-
-Model Context Protocol (MCP)
-LangGraph
-
-</td>
-<td width="33%" valign="top">
-
-**Learning**
-
-Advanced RAG architectures
-LLM evaluation & benchmarking
-
-</td>
-</tr>
-</table>
+`LangChain` `RAG` `LangGraph` `Model Context Protocol (MCP)` `Databases (SQL & NoSQL design)`
 
 <br/>
 
 ---
 
+## Current Focus
+
+**Building:** EquationAI v2 — closing the sandbox's known introspection gap, adding persistence for solve history, and expanding multi-part problem coverage.
+
+**Fixing:** FactsAI — corrected a silent label-mapping bug in the LIAR data loader and a stopword-preprocessing default; reported metrics are being re-validated before this project is featured again at full weight.
+
+<br/>
+
+---
 
 ## GitHub Overview
 
 <div align="center">
-
 
 <br/>
 
@@ -285,8 +329,6 @@ LLM evaluation & benchmarking
 
 ---
 
-
-
 <div align="center">
 
 ## Connect
@@ -298,8 +340,6 @@ LLM evaluation & benchmarking
 <img src="https://img.shields.io/badge/Email-38BDF8?style=for-the-badge&logo=gmail&logoColor=white" />
 </a>
 
-
-
-<sub>Building AI systems that are reliable, scalable, and solve real problems.</sub>
+<sub>Building AI systems that check their own work.</sub>
 
 </div>
