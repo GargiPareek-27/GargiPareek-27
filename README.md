@@ -48,7 +48,6 @@ Computer Science undergraduate at **IIIT Pune** (B.Tech CSE, expected 2028). I b
 | | |
 |---|---|
 | 🎓 **Education** | B.Tech CSE, IIIT Pune — Class of 2028 |
-| 🎯 **Targeting** | SDE / AI-ML / NLP Internships (currently: UBS Business Solutions India SIP) |
 | 🏆 **Hackathons** | Bharatiya Antariksh Hackathon 2026 · Smart India Hackathon · Myntra WeForShe HackerRamp |
 | 🛠️ **Shipped** | 1 live deployed full-stack AI product (EquationAI), evaluated on a 42-problem custom benchmark |
 | 📫 **Contact** | [LinkedIn](https://www.linkedin.com/in/gargi-pareek-004895364) · [Email](mailto:gargipareek2007@gmail.com) · [GitHub](https://github.com/GargiPareek-27) |
