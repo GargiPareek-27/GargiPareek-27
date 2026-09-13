@@ -177,8 +177,6 @@ A hybrid deep learning system combining **RoBERTa** contextual embeddings with a
 
 <img src="https://img.shields.io/badge/Status-Active%20Cleanup-38BDF8?style=for-the-badge&labelColor=0B1120" />
 
-<sub>Reported metrics are being re-validated after fixing a data-labeling bug and a stopword-preprocessing default — see the repo's Known Limitations section.</sub>
-
 <br/>
 
 **Full Model Pipeline**
