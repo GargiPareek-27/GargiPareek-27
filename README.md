@@ -1,342 +1,227 @@
 <div align="center">
 
-<br/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:7C3AED,35:2563EB,70:06B6D4,100:10B981&height=230&section=header&text=Gargi%20Pareek&fontSize=56&fontColor=ffffff&fontAlignY=36&animation=fadeIn&desc=LLM%20Engineering%20%C2%B7%20Machine%20Learning%20%C2%B7%20DSA&descSize=19&descAlignY=58&descColor=F0F9FF" width="100%" alt="Gargi Pareek" />
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=1200&color=38BDF8&center=true&vCenter=true&width=750&lines=Gargi+Pareek;Building+Production-Ready+AI+Systems;Neuro-Symbolic+Reasoning+%7C+FastAPI+%7C+Next.js" alt="Typing SVG" />
-
-<br/>
-
-<img src="https://img.shields.io/badge/Focus-LLM%20Engineering-38BDF8?style=for-the-badge&labelColor=0B1120" />
-<img src="https://img.shields.io/badge/Building-EquationAI-38BDF8?style=for-the-badge&labelColor=0B1120" />
-<img src="https://img.shields.io/badge/Status-Open%20to%20Internships-38BDF8?style=for-the-badge&labelColor=0B1120" />
+<img src="https://img.shields.io/badge/LLM%20Engineering-7C3AED?style=for-the-badge&logo=openai&logoColor=white" />
+<img src="https://img.shields.io/badge/Machine%20Learning-2563EB?style=for-the-badge&logo=pytorch&logoColor=white" />
+<img src="https://img.shields.io/badge/DSA-F59E0B?style=for-the-badge&logo=leetcode&logoColor=white" />
 
 <br/><br/>
 
-<a href="https://www.linkedin.com/in/gargi-pareek-004895364">
-<img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
-</a>
-<a href="mailto:gargipareek2007@gmail.com">
-<img src="https://img.shields.io/badge/Email-38BDF8?style=for-the-badge&logo=gmail&logoColor=white" />
-</a>
-<a href="https://github.com/GargiPareek-27">
-<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
-</a>
-
-<br/><br/>
-
-<img src="https://komarev.com/ghpvc/?username=GargiPareek-27&style=for-the-badge&color=38BDF8&label=PROFILE+VIEWS" />
-<img src="https://img.shields.io/github/followers/GargiPareek-27?style=for-the-badge&color=38BDF8&labelColor=0B1120" />
+<a href="https://www.linkedin.com/in/gargi-pareek-004895364"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+<a href="mailto:gargipareek2007@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+<a href="https://github.com/GargiPareek-27"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
+<img src="https://img.shields.io/badge/Open%20to-Internships-22C55E?style=for-the-badge" />
 
 </div>
 
 <br/>
 
----
+## 👩‍💻 About
 
-## About
+B.Tech Computer Science student at **IIIT Pune** (Class of 2028), specializing in **LLM engineering** and **machine learning**, backed by strong **data structures & algorithms** fundamentals.
 
-Computer Science undergraduate at **IIIT Pune** (B.Tech CSE, expected 2028). I build AI systems that go past the notebook stage — full applications with a backend, a frontend, and reasoning that holds up under real inputs, not just curated demo prompts.
-
-**`EquationAI`** and **`FactsAI`** are where most of that shows: a neuro-symbolic math reasoning platform (live and deployed) and a hybrid transformer + RNN pipeline for fake news detection (currently being re-validated after fixing a data-labeling bug).
-
-> I care most about the layer between *"the model works"* and *"the model is verifiably correct"* — the difference between an LLM sounding confident and a system that actually checks its own answers.
+I build LLM systems that don't just sound right but are *checked*: structured model outputs, deterministic execution, independent verification, and evaluation against adversarial inputs.
 
 <br/>
 
-### Quick Facts for Recruiters
-
-| | |
-|---|---|
-| 🎓 **Education** | B.Tech CSE, IIIT Pune — Class of 2028 |
-| 🏆 **Hackathons** | Bharatiya Antariksh Hackathon 2026 · Smart India Hackathon · Myntra WeForShe HackerRamp |
-| 🛠️ **Shipped** | 1 live deployed full-stack AI product (EquationAI), evaluated on a 42-problem custom benchmark |
-| 📫 **Contact** | [LinkedIn](https://www.linkedin.com/in/gargi-pareek-004895364) · [Email](mailto:gargipareek2007@gmail.com) · [GitHub](https://github.com/GargiPareek-27) |
-
-<br/>
-
----
-
-<div align="center">
-
-### Flagship Project
-
-# 🧮 EquationAI
-
-**Neuro-symbolic math problem solver**
-
-Combines LLM reasoning with deterministic SymPy computation for verified, step-by-step solutions — not just plausible-sounding ones.
-
-<br/>
-
-<a href="https://github.com/GargiPareek-27/EquationAI"><img src="https://img.shields.io/badge/Repository-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
-<a href="https://equation-ai.vercel.app/"><img src="https://img.shields.io/badge/Live%20Demo-38BDF8?style=for-the-badge&logo=vercel&logoColor=white" /></a>
-
-</div>
-
-<br/>
-
-**Why it's technically interesting**
-
-LLMs are fundamentally unreliable at arithmetic and symbolic manipulation — they predict plausible tokens, not verified calculations. EquationAI splits the problem across two components that play to different strengths: **Gemini** reads the natural-language problem and decomposes it into a structured JSON plan (variables, steps, SymPy expressions), while a **sandboxed SymPy engine** executes every step's actual math. The final answer a user sees was computed, not generated by the model.
-
-To close the remaining gap, a **mismatch verifier** independently compares the LLM's own stated answer against SymPy's computed result — using numeric comparison first, and falling back to symbolic simplification (`sympy.simplify(a - b) == 0`) for expressions containing free variables, like general solutions to differential equations.
-
-<br/>
-
-**Core Features**
-
-| | |
-|---|---|
-| 🧠 | LLM parses problems into structured, executable plans |
-| 🧮 | Deterministic SymPy computation — never LLM-generated arithmetic |
-| ✅ | Independent mismatch verifier cross-checks every answer |
-| 🔒 | Sandboxed execution — `__builtins__` stripped, only SymPy exposed |
-| 📐 | LaTeX-rendered step-by-step output via KaTeX |
-| 🧪 | Resumable evaluation harness with adversarial test cases |
-
-<br/>
-
-**Full System Architecture**
-
-```mermaid
-flowchart TD
-    subgraph Client["Frontend — Next.js 16 / React 19 / Tailwind"]
-        A[User submits problem]
-        N[Step-by-step solution rendered with KaTeX]
-    end
-
-    subgraph API["Backend — FastAPI"]
-        B[Request received & validated]
-        C[Gemini 2.5 Flash: decomposes problem]
-        D["Structured JSON plan
-        (variables, steps, SymPy exprs, claimed answer)"]
-    end
-
-    subgraph Sandbox["Sandboxed Execution Layer"]
-        E["SymPy Executor
-        (__builtins__ stripped)"]
-        F{Execution successful?}
-        G[Computed step-by-step result]
-        H[Error handler → graceful failure response]
-    end
-
-    subgraph Verify["Verification Layer"]
-        I[Mismatch Verifier]
-        J{Numeric match
-        with LLM's claimed answer?}
-        K[Symbolic simplification fallback
-        sympy.simplify a - b == 0]
-        L[Verified final answer]
-    end
-
-    A --> B --> C --> D --> E
-    E --> F
-    F -->|Yes| G
-    F -->|No| H
-    D -. claimed answer .-> I
-    G --> I --> J
-    J -->|Yes| L
-    J -->|No| K --> L
-    L --> N
-```
-
-<br/>
-
-**Evaluation**
-
-A resumable evaluation harness covers **42 problems across 23 categories** — arithmetic, algebra, unit conversion, probability, combinatorics, coordinate geometry, linear algebra, series, differential equations, substitution-trick integration, 3D geometry, complex numbers, limits, optimization, statistics — plus deliberately ambiguous, nonsensical, and **adversarial prompt-injection inputs**, to test whether the system correctly recognizes when *not* to answer, or refuses to be hijacked.
-
-**Result: 36/36 ground-truth accuracy** (6 additional cases correctly flagged for manual review due to multiple valid answer formats, not failures) — including 2/2 on prompt-injection resistance, a test category not published by comparable consumer math tools (Photomath, Mathway, Wolfram Alpha, Symbolab).
-
-[`ARCHITECTURE.md`](https://github.com/GargiPareek-27/EquationAI/blob/main/ARCHITECTURE.md) documents four real bugs found and fixed during development — including a sandboxing gap, a numeric-vs-symbolic verifier blind spot, and a scoring bug in the evaluation harness itself — with the reasoning behind each fix.
-
-**Tech Stack**
-
-<p>
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
-<img src="https://img.shields.io/badge/Next.js%2016-000000?style=flat-square&logo=nextdotjs&logoColor=white" />
-<img src="https://img.shields.io/badge/React%2019-61DAFB?style=flat-square&logo=react&logoColor=black" />
-<img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" />
-<img src="https://img.shields.io/badge/SymPy-3776AB?style=flat-square&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/Gemini%202.5%20Flash-4285F4?style=flat-square&logo=googlegemini&logoColor=white" />
-<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
-</p>
-
-<br/>
-
----
-
-<br/>
-
-### 📰 FactsAI
-
-<sub>Research Exploration — Hybrid RoBERTa–BiLSTM Fake News Detection</sub>
-
-A hybrid deep learning system combining **RoBERTa** contextual embeddings with a **BiLSTM** and **additive attention mechanism** for fake news classification, served through a Streamlit interface. Trained on a merged **ISOT + LIAR + Kaggle** dataset.
-
-<img src="https://img.shields.io/badge/Status-Active%20Cleanup-38BDF8?style=for-the-badge&labelColor=0B1120" />
-
-<br/>
-
-**Full Model Pipeline**
-
-```mermaid
-flowchart LR
-    subgraph Ingest["Data Layer"]
-        A["Raw article
-        (ISOT + LIAR + Kaggle merged)"]
-        B[Cleaning & normalization]
-        C["Stopword handling
-        (fixed default)"]
-    end
-
-    subgraph Encode["Representation Layer"]
-        D[Tokenizer]
-        E[RoBERTa Encoder
-        contextual embeddings]
-    end
-
-    subgraph Sequence["Sequence Modeling"]
-        F[BiLSTM]
-        G[Additive Attention
-        weighs salient tokens]
-    end
-
-    subgraph Output["Prediction Layer"]
-        H[Classifier head]
-        I[Real / Fake label + confidence]
-        J[Streamlit interface]
-    end
-
-    A --> B --> C --> D --> E --> F --> G --> H --> I --> J
-```
-
-<p>
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
-<img src="https://img.shields.io/badge/Transformers-FFD21E?style=flat-square&logo=huggingface&logoColor=black" />
-<img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" />
-</p>
-
-<a href="https://github.com/GargiPareek-27/FactsAI"><img src="https://img.shields.io/badge/Repository-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
-
-<br/>
-
----
-
-## Tech Stack
+## 🧠 LLM Engineering
 
 <table>
 <tr>
-<td valign="top" width="25%">
+<td width="33%" valign="top">
 
-**Languages**
-
-<img src="https://skillicons.dev/icons?i=python,cpp" />
-
-</td>
-<td valign="top" width="25%">
-
-**AI & LLM**
-
-<img src="https://skillicons.dev/icons?i=pytorch,tensorflow" />
-
-`Transformers` `Hugging Face`
-`Gemini API` `NLP`
-`Scikit-Learn`
+#### 🟣 Structured Reasoning
+LLMs decompose problems into structured, machine-executable plans instead of free-form text.
 
 </td>
-<td valign="top" width="25%">
+<td width="33%" valign="top">
 
-**Backend**
-
-<img src="https://skillicons.dev/icons?i=fastapi,nodejs" />
-
-`FastAPI` `Node.js`
+#### 🔵 Verification
+Deterministic computation plus an independent verifier that cross-checks the model's own claimed answer.
 
 </td>
-<td valign="top" width="25%">
+<td width="33%" valign="top">
 
-**Frontend**
-
-<img src="https://skillicons.dev/icons?i=nextjs,react,ts,tailwind" />
-
-</td>
-</tr>
-<tr>
-<td valign="top" width="25%">
-
-**Databases**
-
-<img src="https://skillicons.dev/icons?i=postgres,mongodb,mysql" />
-
-`PostgreSQL` `MongoDB` `MySQL`
-
-</td>
-<td colspan="3" valign="top">
-
-**Developer Tools**
-
-<img src="https://skillicons.dev/icons?i=git,github,docker,linux,vscode" />
+#### 🟢 Evaluation & Safety
+Custom benchmarks with adversarial and prompt-injection cases, plus sandboxed execution.
 
 </td>
 </tr>
 </table>
 
-<br/>
-
----
-
-## Currently Learning
-
-<sub>Actively studying, not yet backed by a shipped project — listed here rather than in the main skill stack.</sub>
-
-`LangChain` `RAG` `LangGraph` `Model Context Protocol (MCP)` `Databases (SQL & NoSQL design)`
+<p align="center">
+<img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" />
+<img src="https://img.shields.io/badge/Gemini%20API-4285F4?style=for-the-badge&logo=googlegemini&logoColor=white" />
+<img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
+<img src="https://img.shields.io/badge/SymPy-3B5526?style=for-the-badge&logo=sympy&logoColor=white" />
+<img src="https://img.shields.io/badge/Prompt%20Engineering-7C3AED?style=for-the-badge" />
+</p>
 
 <br/>
 
----
+## 🔬 Machine Learning
 
-## Current Focus
+<table>
+<tr>
+<td width="50%" valign="top">
 
-**Building:** EquationAI v2 — closing the sandbox's known introspection gap, adding persistence for solve history, and expanding multi-part problem coverage.
+#### Deep Learning & NLP
+Transformer encoders (**RoBERTa**) combined with sequence models (**BiLSTM**, additive attention) for text classification.
 
-**Fixing:** FactsAI — corrected a silent label-mapping bug in the LIAR data loader and a stopword-preprocessing default; reported metrics are being re-validated before this project is featured again at full weight.
+</td>
+<td width="50%" valign="top">
+
+#### Frameworks
+Model development and training with PyTorch and TensorFlow; Hugging Face Transformers for pretrained encoders; Scikit-Learn for classical ML.
+
+</td>
+</tr>
+</table>
+
+<p align="center">
+<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" />
+<img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" />
+<img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" />
+<img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white" />
+<img src="https://img.shields.io/badge/NLP-EC4899?style=for-the-badge" />
+</p>
 
 <br/>
 
----
+## 🚀 Selected Work
 
-## GitHub Overview
+### 🧮 EquationAI — Neuro-Symbolic Math Solver
+
+<a href="https://equation-ai.vercel.app/"><img src="https://img.shields.io/badge/Live%20Demo-10B981?style=flat-square&logo=vercel&logoColor=white" /></a>
+<a href="https://github.com/GargiPareek-27/EquationAI"><img src="https://img.shields.io/badge/Repository-181717?style=flat-square&logo=github&logoColor=white" /></a>
+<a href="https://github.com/GargiPareek-27/EquationAI/blob/main/ARCHITECTURE.md"><img src="https://img.shields.io/badge/Architecture%20Notes-7C3AED?style=flat-square" /></a>
+
+A full-stack system that pairs LLM reasoning with deterministic computation. **Gemini** decomposes a problem into a structured JSON plan, a **sandboxed SymPy engine** executes every step, and an independent **mismatch verifier** cross-checks the result, first numerically and then symbolically.
+
+<p>
+<img src="https://img.shields.io/badge/Accuracy-36%2F36%20ground%20truth-22C55E?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Benchmark-42%20problems%20%C2%B7%2023%20categories-2563EB?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Prompt%20Injection-2%2F2%20resisted-7C3AED?style=for-the-badge" />
+</p>
+
+<sub>6 additional cases were flagged for manual review due to multiple valid answer formats, not failures.</sub>
+
+`Python` `FastAPI` `SymPy` `Gemini 2.5 Flash` `Next.js` `React` `Tailwind` `Docker`
+
+<br/>
+
+### 📰 FactsAI — Fake News Detection *(research; metrics under re-validation)*
+
+Hybrid **RoBERTa + BiLSTM** with additive attention, trained on merged ISOT, LIAR and Kaggle data. After fixing a label-mapping bug and a preprocessing default, results are being re-validated before being reported. [Repository →](https://github.com/GargiPareek-27/FactsAI)
+
+`PyTorch` `Transformers` `Streamlit`
+
+<br/>
+
+## 🏆 Achievements
+
+<table>
+<tr>
+<td width="60" align="center">🥇</td>
+<td><b>Finalist — Paytm Hire Hackathon</b></td>
+</tr>
+<tr>
+<td align="center">🏅</td>
+<td><b>Bharatiya Antariksh Hackathon 2026</b> · <b>Smart India Hackathon</b> · <b>Myntra WeForShe HackerRamp</b></td>
+</tr>
+<tr>
+<td align="center">🧩</td>
+<td><b>300+ problems solved</b> on LeetCode, GeeksforGeeks, Codeforces and other platforms</td>
+</tr>
+</table>
+
+<br/>
+
+## 🧩 Data Structures & Algorithms
+
+<p>
+<img src="https://img.shields.io/badge/Total%20Solved-300%2B-F59E0B?style=for-the-badge&labelColor=0B1120" />
+<img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" />
+<img src="https://img.shields.io/badge/GeeksforGeeks-2F8D46?style=for-the-badge&logo=geeksforgeeks&logoColor=white" />
+<img src="https://img.shields.io/badge/Codeforces-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white" />
+<img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" />
+</p>
+
+Consistent problem solving in C++, with an emphasis on complexity analysis and clean implementations.
+
+<br/>
+
+## 🛠️ Tech Stack
+
+<table>
+<tr>
+<td width="150"><b>💻 Languages</b></td>
+<td>
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white" />
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+</td>
+</tr>
+<tr>
+<td><b>🤖 LLM & ML</b></td>
+<td>
+<img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white" />
+<img src="https://img.shields.io/badge/Gemini-4285F4?style=flat-square&logo=googlegemini&logoColor=white" />
+<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
+<img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" />
+<img src="https://img.shields.io/badge/Transformers-FFD21E?style=flat-square&logo=huggingface&logoColor=black" />
+<img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" />
+</td>
+</tr>
+<tr>
+<td><b>⚙️ Backend</b></td>
+<td>
+<img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
+<img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" />
+</td>
+</tr>
+<tr>
+<td><b>🎨 Frontend</b></td>
+<td>
+<img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" />
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" />
+<img src="https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" />
+</td>
+</tr>
+<tr>
+<td><b>🗄️ Databases</b></td>
+<td>
+<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
+<img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" />
+<img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" />
+</td>
+</tr>
+<tr>
+<td><b>🧰 Tools</b></td>
+<td>
+<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" />
+<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
+<img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" />
+</td>
+</tr>
+</table>
+
+<sub>📚 Currently learning: RAG · LangGraph · Model Context Protocol</sub>
+
+<br/>
+
+## 🎓 Education
+
+**B.Tech, Computer Science & Engineering** — IIIT Pune (expected 2028)
+
+<br/>
 
 <div align="center">
 
-<br/>
+<a href="https://www.linkedin.com/in/gargi-pareek-004895364"><img src="https://img.shields.io/badge/Let's%20Connect-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+<a href="mailto:gargipareek2007@gmail.com"><img src="https://img.shields.io/badge/Email%20Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" /></a>
 
-<img src="https://github-readme-streak-stats-eight.vercel.app?user=GargiPareek-27&theme=tokyonight&hide_border=true" />
-
-<br/>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=GargiPareek-27&theme=tokyo-night&hide_border=true" width="100%" />
-
-</div>
-
-<br/>
-
----
-
-<div align="center">
-
-## Connect
-
-<a href="https://www.linkedin.com/in/gargi-pareek-004895364">
-<img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
-</a>
-<a href="mailto:gargipareek2007@gmail.com">
-<img src="https://img.shields.io/badge/Email-38BDF8?style=for-the-badge&logo=gmail&logoColor=white" />
-</a>
-
-<sub>Building AI systems that check their own work.</sub>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:10B981,35:06B6D4,70:2563EB,100:7C3AED&height=100&section=footer" width="100%" alt="" />
 
 </div>
