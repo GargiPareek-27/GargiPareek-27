@@ -213,7 +213,7 @@ Consistent problem solving in C++, with an emphasis on complexity analysis and c
 
 ## 🎓 Education
 
-**B.Tech, Computer Science & Engineering** — IIIT Pune (expected 2028)
+**B.Tech, Computer Science & Engineering** — IIIT Pune (2028)
 
 <br/>
 
